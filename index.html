@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApClub MVP App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>ApClub MVP App</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showSection('instructor')">Instructor App</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('admin')">Admin App</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('customer')">Customer App</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('saas-tools')">SaaS Tools</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Instructor App -->
+        <section id="instructor" class="app-section active">
+            <h2>Instructor App</h2>
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Scheduling:</strong> Schedule sessions with customers.</li>
+                <li><strong>Tracking:</strong> Monitor customers' fitness progress.</li>
+                <li><strong>Feedback:</strong> Provide feedback to customers after each session.</li>
+            </ul>
+
+            <h3>Features Implemented</h3>
+            <form id="instructor-form">
+                <input type="text" id="customerName" class="input-field" placeholder="Customer Name" required>
+                <input type="date" id="sessionDate" class="input-field" required>
+                <textarea id="sessionFeedback" class="input-field" placeholder="Session Feedback" required></textarea>
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </section>
+
+        <!-- Admin App -->
+        <section id="admin" class="app-section">
+            <h2>Admin App</h2>
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Scheduling:</strong> Monitor all scheduled sessions.</li>
+                <li><strong>Communication:</strong> Send notifications to instructors or customers.</li>
+                <li><strong>Tracking:</strong> View a log of all activities.</li>
+            </ul>
+
+            <h3>Send Notification</h3>
+            <textarea id="notificationMessage" class="input-field" placeholder="Enter your message" required></textarea>
+            <button id="sendNotification" class="submit-btn">Send Notification</button>
+        </section>
+
+        <!-- Customer App -->
+        <section id="customer" class="app-section">
+            <h2>Customer App</h2>
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Scheduling:</strong> View upcoming training sessions.</li>
+                <li><strong>Feedback:</strong> View feedback from instructors after each session.</li>
+            </ul>
+
+            <h3>Your Schedule</h3>
+            <div id="schedule">
+                <p>No upcoming sessions.</p>
+            </div>
+
+            <h3>Instructor Feedback</h3>
+            <div id="instructor-feedback">
+                <p>No feedback available.</p>
+            </div>
+        </section>
+
+        <!-- SaaS Tools & Integration Suggestions -->
+        <section id="saas-tools" class="app-section">
+            <h2>SaaS Tools & Integration Suggestions</h2>
+
+            <h3>Calendly</h3>
+            <p><strong>Key Capabilities:</strong> Easy scheduling and calendar syncing.</p>
+            <p><strong>How it meets the requirements:</strong> Handles scheduling, reminders, but lacks feedback and tracking functionality.</p>
+            <p><strong>Customization:</strong> Integration with other tools needed for tracking and feedback.</p>
+
+            <h3>Trainerize</h3>
+            <p><strong>Key Capabilities:</strong> Fitness training, session scheduling, and progress tracking.</p>
+            <p><strong>How it meets the requirements:</strong> Perfect for instructors to track client progress, schedule sessions, and provide feedback.</p>
+            <p><strong>Customization:</strong> Minor customizations needed for full integration with existing systems.</p>
+
+            <h3>Mindbody</h3>
+            <p><strong>Key Capabilities:</strong> Scheduling, communication, and customer management.</p>
+            <p><strong>How it meets the requirements:</strong> Covers most features but may need customizations for fitness tracking.</p>
+
+            <h3>Suggestions for Integration</h3>
+            <ul>
+                <li>Calendly + Trainerize: Combine for scheduling and progress tracking.</li>
+                <li>Mindbody: One-stop solution for scheduling, communication, and tracking.</li>
+                <li>Custom Solutions: Build a solution combining multiple tools for a tailored experience.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ApClub. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
